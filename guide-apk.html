@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guide APK RestoGest</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+  body { font-family: 'Manrope', sans-serif; background: #0a0a0a; color: #fafafa; line-height: 1.6; }
+  .serif { font-family: 'Playfair Display', serif; }
+  .gold { color: #d4a574; }
+  
+  .container { max-width: 900px; margin: 0 auto; padding: 40px 24px; }
+  
+  header { text-align: center; padding: 60px 20px 40px; background: radial-gradient(ellipse at center, rgba(212,165,116,0.15) 0%, transparent 60%); }
+  .logo { width: 72px; height: 72px; border-radius: 16px; background: linear-gradient(135deg, #d4a574, #c9a961); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 36px; }
+  h1 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 600; margin-bottom: 12px; line-height: 1.1; }
+  h1 em { font-style: italic; color: #d4a574; }
+  .subtitle { color: #a3a3a3; font-size: 18px; max-width: 500px; margin: 0 auto; }
+  
+  .badge { display: inline-block; padding: 6px 14px; border-radius: 100px; background: rgba(212,165,116,0.15); color: #d4a574; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 24px; font-weight: 600; }
+  
+  .total { display: inline-flex; align-items: center; gap: 24px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 20px 32px; margin-top: 32px; }
+  .total-item { text-align: left; }
+  .total-label { font-size: 10px; letter-spacing: 0.2em; color: #737373; text-transform: uppercase; margin-bottom: 4px; }
+  .total-value { font-family: 'Playfair Display', serif; font-size: 24px; color: #d4a574; }
+  .total-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.1); }
+  
+  .step { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 32px; margin-bottom: 20px; position: relative; overflow: hidden; }
+  .step:hover { border-color: rgba(212,165,116,0.3); }
+  .step-number { position: absolute; top: 24px; right: 24px; width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, #d4a574, #8b6f3d); color: #0a0a0a; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 700; font-size: 20px; }
+  .step-time { font-size: 11px; letter-spacing: 0.2em; color: #d4a574; text-transform: uppercase; margin-bottom: 12px; font-weight: 600; }
+  .step-title { font-family: 'Playfair Display', serif; font-size: 26px; margin-bottom: 12px; padding-right: 60px; }
+  .step-desc { color: #a3a3a3; margin-bottom: 20px; }
+  
+  .action { background: linear-gradient(135deg, #d4a574, #c9a961); color: #0a0a0a; padding: 14px 24px; border-radius: 10px; display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 600; margin: 8px 0; transition: transform 0.15s; }
+  .action:hover { transform: translateY(-2px); }
+  
+  ol { margin-left: 20px; color: #d4d4d4; }
+  ol li { margin-bottom: 8px; padding-left: 8px; }
+  ol li strong { color: #fafafa; }
+  
+  code { background: rgba(212,165,116,0.15); color: #d4a574; padding: 2px 8px; border-radius: 4px; font-size: 13px; font-family: 'SF Mono', Monaco, monospace; }
+  
+  .warn { background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3); border-radius: 10px; padding: 16px; margin: 16px 0; color: #fbbf24; font-size: 14px; }
+  .warn::before { content: "⚠️ "; }
+  
+  .tip { background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.3); border-radius: 10px; padding: 16px; margin: 16px 0; color: #6ee7b7; font-size: 14px; }
+  .tip::before { content: "💡 "; }
+  
+  .download-box { text-align: center; background: linear-gradient(135deg, rgba(212,165,116,0.15), rgba(139,111,61,0.1)); border: 2px solid rgba(212,165,116,0.4); border-radius: 20px; padding: 40px; margin: 40px 0; }
+  .download-box h2 { font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 12px; }
+  .download-box p { color: #a3a3a3; margin-bottom: 20px; }
+  
+  .footer-note { text-align: center; padding: 40px 20px; color: #737373; font-size: 14px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 60px; }
+  
+  @media (max-width: 640px) {
+    h1 { font-size: 34px; }
+    .step-title { font-size: 20px; padding-right: 50px; }
+    .total { flex-direction: column; gap: 12px; }
+    .total-divider { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍴</div>
+  <div class="badge">🇹🇳 Guide rapide</div>
+  <h1>Obtenez votre <em>APK</em><br>en 20 minutes.</h1>
+  <p class="subtitle">7 étapes simples, sans installer Android Studio, 100% gratuit grâce à GitHub Actions.</p>
+  
+  <div class="total">
+    <div class="total-item">
+      <div class="total-label">Durée</div>
+      <div class="total-value">~20 min</div>
+    </div>
+    <div class="total-divider"></div>
+    <div class="total-item">
+      <div class="total-label">Coût</div>
+      <div class="total-value">Gratuit</div>
+    </div>
+    <div class="total-divider"></div>
+    <div class="total-item">
+      <div class="total-label">Installation</div>
+      <div class="total-value">Rien</div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="download-box">
+    <div style="font-size: 48px; margin-bottom: 16px;">📦</div>
+    <h2>Projet prêt à uploader</h2>
+    <p>Le fichier <code>restogest-apk-projet.zip</code> contient tout ce dont vous avez besoin.</p>
+    <p style="color: #d4a574; font-size: 14px;">Extrayez-le sur votre ordinateur avant de commencer.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">1</div>
+    <div class="step-time">3 minutes</div>
+    <h2 class="step-title">Créez un compte GitHub</h2>
+    <p class="step-desc">GitHub est une plateforme gratuite. C'est là que votre code va vivre et que le build va tourner.</p>
+    <a href="https://github.com/signup" class="action" target="_blank">🔗 github.com/signup →</a>
+    <ol>
+      <li>Entrez votre <strong>email</strong> et créez un mot de passe</li>
+      <li>Choisissez un nom d'utilisateur (ex: <code>mohamedbenali</code>)</li>
+      <li>Vérifiez votre email</li>
+      <li>Choisissez le plan <strong>Free</strong></li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <div class="step-number">2</div>
+    <div class="step-time">2 minutes</div>
+    <h2 class="step-title">Créez un dépôt (repository)</h2>
+    <p class="step-desc">Un dépôt, c'est un dossier qui stocke votre code sur GitHub.</p>
+    <a href="https://github.com/new" class="action" target="_blank">🔗 github.com/new →</a>
+    <ol>
+      <li><strong>Repository name</strong> : <code>restogest-mobile</code></li>
+      <li>Cochez <strong>Private</strong> (pour garder votre code privé)</li>
+      <li><strong>Ne cochez PAS</strong> "Add README file"</li>
+      <li>Cliquez sur <strong>Create repository</strong></li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <div class="step-number">3</div>
+    <div class="step-time">5 minutes</div>
+    <h2 class="step-title">Uploadez les fichiers</h2>
+    <p class="step-desc">Extrayez le ZIP et uploadez tout son contenu sur GitHub.</p>
+    <ol>
+      <li>Sur la page de votre nouveau dépôt, cliquez sur <strong>"uploading an existing file"</strong> (lien bleu)</li>
+      <li><strong>Glissez-déposez TOUS les fichiers</strong> extraits du ZIP dans la zone</li>
+      <li>⚠️ Important : incluez bien les dossiers <code>.github</code> et le fichier <code>.gitignore</code> (qui commencent par un point)</li>
+      <li>En bas, cliquez sur le bouton vert <strong>Commit changes</strong></li>
+    </ol>
+    <div class="warn">
+      Si vous ne voyez pas les fichiers cachés (<code>.github</code>, <code>.gitignore</code>) :<br>
+      <strong>Windows</strong> : Explorateur → Affichage → Éléments masqués<br>
+      <strong>Mac</strong> : Appuyez sur <code>Cmd + Shift + .</code> dans le Finder
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">4</div>
+    <div class="step-time">1 clic</div>
+    <h2 class="step-title">Lancez le build</h2>
+    <p class="step-desc">GitHub va compiler votre APK dans le cloud, automatiquement.</p>
+    <ol>
+      <li>Cliquez sur l'onglet <strong>Actions</strong> en haut de la page du dépôt</li>
+      <li>Si demandé, cliquez sur le gros bouton vert <strong>"I understand my workflows, go ahead and enable them"</strong></li>
+      <li>Le build démarre tout seul ! 🎉</li>
+    </ol>
+    <div class="tip">
+      Si le build ne démarre pas automatiquement : cliquez sur <strong>"Build Android APK"</strong> à gauche, puis <strong>"Run workflow"</strong> à droite.
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">5</div>
+    <div class="step-time">8 à 12 minutes</div>
+    <h2 class="step-title">Attendez la compilation</h2>
+    <p class="step-desc">GitHub fait tout le travail à votre place.</p>
+    <ol>
+      <li>Un job apparaît avec un point <strong>jaune 🟡</strong> (en cours)</li>
+      <li>Cliquez dessus pour voir l'avancement en direct</li>
+      <li>Les étapes deviennent vertes ✅ une par une</li>
+      <li>Quand tout est vert, c'est prêt !</li>
+    </ol>
+    <div class="tip">
+      Profitez-en pour prendre un thé à la menthe. ☕🇹🇳
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-number">6</div>
+    <div class="step-time">1 minute</div>
+    <h2 class="step-title">Téléchargez l'APK</h2>
+    <p class="step-desc">Votre fichier APK est prêt dans la section "Artifacts".</p>
+    <ol>
+      <li>Cliquez sur le job terminé (vert ✅)</li>
+      <li>Scrollez jusqu'en bas de la page</li>
+      <li>Dans <strong>"Artifacts"</strong>, cliquez sur <strong>"RestoGest-APK"</strong></li>
+      <li>Un fichier ZIP se télécharge</li>
+      <li>Extrayez-le → vous avez <code>RestoGest-v1.0.0.apk</code> 🎉</li>
+    </ol>
+  </div>
+
+  <div class="step">
+    <div class="step-number">7</div>
+    <div class="step-time">2 minutes</div>
+    <h2 class="step-title">Installez sur votre téléphone</h2>
+    <p class="step-desc">Transférez l'APK sur votre Android et installez-le.</p>
+    <ol>
+      <li><strong>Envoyez l'APK à votre téléphone</strong> par WhatsApp, email, ou câble USB</li>
+      <li>Sur le téléphone, ouvrez le fichier <code>RestoGest-v1.0.0.apk</code></li>
+      <li>Si Android bloque l'installation : <strong>Paramètres → Autoriser cette source</strong></li>
+      <li>Appuyez sur <strong>Installer</strong></li>
+      <li>Ouvrez RestoGest depuis votre liste d'apps 🍴</li>
+    </ol>
+    <div class="tip">
+      <strong>Identifiants de test</strong> :<br>
+      Email : <code>mohamed@darelhout.tn</code><br>
+      Mot de passe : <code>demo2026</code>
+    </div>
+  </div>
+
+  <div class="download-box" style="margin-top: 60px;">
+    <div style="font-size: 48px; margin-bottom: 16px;">🎉</div>
+    <h2>C'est fait !</h2>
+    <p>Vous avez maintenant RestoGest installé sur votre téléphone.</p>
+    <p style="color: #d4a574;">À chaque modification du code sur GitHub, un nouvel APK sera généré automatiquement.</p>
+  </div>
+
+</div>
+
+<div class="footer-note">
+  RestoGest Mobile · Powered by Capacitor + GitHub Actions<br>
+  Made with ❤️ for Tunisian restaurants 🇹🇳
+</div>
+
+</body>
+</html>

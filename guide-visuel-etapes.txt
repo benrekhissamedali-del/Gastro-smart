@@ -1,0 +1,501 @@
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║     🍴 RESTOGEST APK — GUIDE VISUEL PAS-À-PAS 🇹🇳                ║
+║                                                                   ║
+║     Reproduction exacte de ce que vous allez voir sur GitHub      ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+
+
+┌───────────────────────────────────────────────────────────────────┐
+│  📝 AVANT DE COMMENCER                                            │
+├───────────────────────────────────────────────────────────────────┤
+│                                                                   │
+│  1. Téléchargez le fichier "restogest-apk-projet.zip"             │
+│     que je vous ai fourni                                         │
+│                                                                   │
+│  2. Extrayez-le sur votre bureau :                                │
+│     • Windows : clic droit → "Extraire tout"                      │
+│     • Mac : double-clic sur le ZIP                                │
+│                                                                   │
+│  3. Vous obtenez un dossier "restogest-apk-projet" qui contient : │
+│                                                                   │
+│      📁 .github/           ← IMPORTANT (dossier caché)            │
+│      📁 public/                                                   │
+│      📁 resources/                                                │
+│      📁 src/                                                      │
+│      📄 .gitignore         ← IMPORTANT (fichier caché)            │
+│      📄 capacitor.config.json                                     │
+│      📄 index.html                                                │
+│      📄 package.json                                              │
+│      📄 postcss.config.js                                         │
+│      📄 README.md                                                 │
+│      📄 tailwind.config.js                                        │
+│      📄 vite.config.js                                            │
+│                                                                   │
+│  ⚠️  AFFICHER LES FICHIERS CACHÉS (.github, .gitignore)           │
+│      Windows : Explorateur > Affichage > ☑ Éléments masqués       │
+│      Mac : appuyez sur  Cmd + Maj + .                             │
+│                                                                   │
+└───────────────────────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════
+  ÉTAPE 1 : CRÉER UN COMPTE GITHUB (3 MIN)
+═══════════════════════════════════════════════════════════════════
+
+🔗 Allez sur : https://github.com/signup
+
+Ce que vous verrez :
+
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│                          🐙  GitHub                             │
+│                                                                 │
+│                   Sign up to GitHub                             │
+│                                                                 │
+│   ┌────────────────────────────────────────────────────┐        │
+│   │ Enter your email                                   │        │
+│   │ mohamed@example.com                         ✓      │        │
+│   └────────────────────────────────────────────────────┘        │
+│                         [ Continue → ]                          │
+│                                                                 │
+│   ┌────────────────────────────────────────────────────┐        │
+│   │ Create a password                                  │        │
+│   │ ••••••••••••                                ✓      │        │
+│   └────────────────────────────────────────────────────┘        │
+│                         [ Continue → ]                          │
+│                                                                 │
+│   ┌────────────────────────────────────────────────────┐        │
+│   │ Enter a username                                   │        │
+│   │ mohamedbenali                               ✓      │        │
+│   └────────────────────────────────────────────────────┘        │
+│                         [ Continue → ]                          │
+│                                                                 │
+│   ✉️  Vérifiez votre email → entrez le code reçu                │
+│                                                                 │
+│   ○ Choisissez le plan "Free" (gratuit)                         │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+✅ Compte créé !
+
+
+═══════════════════════════════════════════════════════════════════
+  ÉTAPE 2 : CRÉER UN NOUVEAU DÉPÔT (2 MIN)
+═══════════════════════════════════════════════════════════════════
+
+🔗 Allez sur : https://github.com/new
+
+Ce que vous verrez :
+
+┌─────────────────────────────────────────────────────────────────┐
+│  🐙  ≡  Search or jump to...   Pull requests  Issues  [+▼] [👤]│
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   Create a new repository                                       │
+│   ───────────────────────────                                   │
+│                                                                 │
+│   Owner *              Repository name *                        │
+│   ┌──────────────┐   ┌─────────────────────────────────────┐    │
+│   │ mohamedbenali│ / │ restogest-mobile                    │    │
+│   └──────────────┘   └─────────────────────────────────────┘    │
+│                         ☝ TAPEZ EXACTEMENT CECI                 │
+│                                                                 │
+│   Description (optional)                                        │
+│   ┌─────────────────────────────────────────────────────────┐   │
+│   │ Mon app de gestion de restaurant                        │   │
+│   └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+│   ○ Public    ● Private         ← ⚠️ CHOISISSEZ PRIVATE         │
+│                                                                 │
+│   Initialize this repository with:                              │
+│   ☐ Add a README file            ← ⚠️ NE COCHEZ PAS             │
+│   ☐ Add .gitignore               ← ⚠️ NE COCHEZ PAS             │
+│   ☐ Choose a license             ← ⚠️ NE COCHEZ PAS             │
+│                                                                 │
+│                           ┌──────────────────────┐              │
+│                           │  Create repository   │ ← CLIQUEZ    │
+│                           └──────────────────────┘              │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+✅ Dépôt créé !
+
+
+═══════════════════════════════════════════════════════════════════
+  ÉTAPE 3 : UPLOADER LES FICHIERS (5 MIN)
+═══════════════════════════════════════════════════════════════════
+
+Après création, vous arrivez sur une page comme ceci :
+
+┌─────────────────────────────────────────────────────────────────┐
+│  mohamedbenali / restogest-mobile   [ 🔒 Private ]              │
+├─────────────────────────────────────────────────────────────────┤
+│  <> Code   ⊙ Issues   ⚙ Pull requests   ▶ Actions   ⚙ Settings │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   Quick setup — if you've done this kind of thing before        │
+│                                                                 │
+│   …or create a new repository on the command line               │
+│                                                                 │
+│   …or push an existing repository from the command line         │
+│                                                                 │
+│   …or import code from another repository                       │
+│                                                                 │
+│   ╔═══════════════════════════════════════════════════════╗     │
+│   ║ 👉 Get started by creating a new file or              ║     │
+│   ║    uploading an existing file   ←←← CLIQUEZ ICI       ║     │
+│   ╚═══════════════════════════════════════════════════════╝     │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+⬇️
+
+Après avoir cliqué sur "uploading an existing file" :
+
+┌─────────────────────────────────────────────────────────────────┐
+│  ← restogest-mobile / Upload files                              │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   ┌─────────────────────────────────────────────────────────┐   │
+│   │                                                         │   │
+│   │            📁                                           │   │
+│   │                                                         │   │
+│   │    Drag files here to add them to your repository       │   │
+│   │                                                         │   │
+│   │                or choose your files                     │   │
+│   │                                                         │   │
+│   │                                                         │   │
+│   └─────────────────────────────────────────────────────────┘   │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+👉 ACTION IMPORTANTE :
+
+   1. OUVREZ le dossier "restogest-apk-projet" extrait
+   2. SÉLECTIONNEZ TOUT (Ctrl+A sur Windows, Cmd+A sur Mac)
+   3. GLISSEZ tout dans la zone carrée de GitHub
+
+   ⚠️ VÉRIFIEZ que vous voyez bien :
+      ☑ Le dossier .github  (avec le point au début)
+      ☑ Le fichier .gitignore  (avec le point au début)
+
+⬇️
+
+Après l'upload, vous verrez une liste comme ça :
+
+┌─────────────────────────────────────────────────────────────────┐
+│   📁 .github/workflows/build-apk.yml                            │
+│   📁 public/                                                    │
+│   📁 resources/                                                 │
+│   📁 src/App.jsx                                                │
+│   📁 src/main.jsx                                               │
+│   📁 src/index.css                                              │
+│   📄 .gitignore                                                 │
+│   📄 README.md                                                  │
+│   📄 capacitor.config.json                                      │
+│   📄 index.html                                                 │
+│   📄 package.json                                               │
+│   📄 postcss.config.js                                          │
+│   📄 tailwind.config.js                                         │
+│   📄 vite.config.js                                             │
+│                                                                 │
+│   ───────────────────────────────────────────────────────       │
+│                                                                 │
+│   Commit changes                                                │
+│   ┌──────────────────────────────────────────────────────┐      │
+│   │ Add files via upload                                 │      │
+│   └──────────────────────────────────────────────────────┘      │
+│                                                                 │
+│   ● Commit directly to the main branch                          │
+│                                                                 │
+│                           ┌──────────────────────┐              │
+│                           │   Commit changes     │ ← CLIQUEZ    │
+│                           └──────────────────────┘              │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+✅ Fichiers uploadés ! Le build va démarrer tout seul !
+
+
+═══════════════════════════════════════════════════════════════════
+  ÉTAPE 4 : VÉRIFIER QUE LE BUILD A DÉMARRÉ (1 MIN)
+═══════════════════════════════════════════════════════════════════
+
+En haut de la page, cliquez sur l'onglet "Actions" :
+
+┌─────────────────────────────────────────────────────────────────┐
+│  mohamedbenali / restogest-mobile                               │
+├─────────────────────────────────────────────────────────────────┤
+│  <> Code   ⊙ Issues   ⚙ Pull requests   ▶ Actions ← CLIQUEZ     │
+└─────────────────────────────────────────────────────────────────┘
+
+⬇️
+
+Si c'est votre premier build, vous verrez peut-être :
+
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│   ⚠️ Workflows aren't being run on this pushed commit           │
+│                                                                 │
+│   The commit you pushed contains workflow files, but none       │
+│   were triggered...                                             │
+│                                                                 │
+│   ╔═══════════════════════════════════════════════════════╗     │
+│   ║  I understand my workflows, go ahead and enable them  ║     │
+│   ╚═══════════════════════════════════════════════════════╝     │
+│                    ☝ CLIQUEZ SUR CE GROS BOUTON VERT            │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+⬇️
+
+Après activation, vous verrez :
+
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│  All workflows                          [ New workflow ]        │
+│  ───────────────                                                │
+│                                                                 │
+│  🟡 Build Android APK                                           │
+│     Creating Production Ready Android App 🚀                    │
+│     main  •  In progress  •  23 seconds ago                     │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+✅ Le build est en cours ! Le point jaune 🟡 signifie "en progression"
+
+
+═══════════════════════════════════════════════════════════════════
+  ÉTAPE 5 : SUIVRE LA COMPILATION EN DIRECT (8-12 MIN)
+═══════════════════════════════════════════════════════════════════
+
+Cliquez sur "Build Android APK" pour voir l'avancement :
+
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│  🟡 Build Android APK                                           │
+│                                                                 │
+│  Summary          │  Jobs                                       │
+│  Jobs             │  ─────                                      │
+│  ────             │                                             │
+│  ● Build RestoGest│  🟡 Build RestoGest APK                     │
+│    APK            │     Steps :                                 │
+│                   │                                             │
+│                   │     ✅ Set up job                  (2s)     │
+│                   │     ✅ Checkout du code            (5s)     │
+│                   │     ✅ Setup Java JDK 21           (12s)    │
+│                   │     ✅ Setup Node.js 20            (8s)     │
+│                   │     ✅ Installation dépendances    (1m20s)  │
+│                   │     ✅ Build de l'app web          (25s)    │
+│                   │     ✅ Ajouter plateforme Android  (45s)    │
+│                   │     🟡 Synchroniser Capacitor      (...)    │
+│                   │     ⚪ Build de l'APK              (waiting)│
+│                   │     ⚪ Upload de l'APK             (waiting)│
+│                   │                                             │
+└─────────────────────────────────────────────────────────────────┘
+
+☕ ATTENDEZ 10 minutes... Allez prendre un thé à la menthe 🇹🇳
+
+⬇️
+
+Quand TOUT est vert ✅ :
+
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│  ✅ Build Android APK                     Duration: 9m 42s      │
+│                                                                 │
+│  ✅ Set up job                                                  │
+│  ✅ Checkout du code                                            │
+│  ✅ Setup Java JDK 21                                           │
+│  ✅ Setup Node.js 20                                            │
+│  ✅ Installation dépendances                                    │
+│  ✅ Build de l'app web (Vite)                                   │
+│  ✅ Ajouter plateforme Android                                  │
+│  ✅ Synchroniser Capacitor → Android                            │
+│  ✅ Rendre gradlew exécutable                                   │
+│  ✅ Build de l'APK (debug)                                      │
+│  ✅ Renommer l'APK                                              │
+│  ✅ Upload de l'APK                                             │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+🎉 BUILD RÉUSSI !
+
+
+═══════════════════════════════════════════════════════════════════
+  ÉTAPE 6 : TÉLÉCHARGER L'APK (1 MIN)
+═══════════════════════════════════════════════════════════════════
+
+Revenez à la vue Summary (cliquez sur "Summary" en haut à gauche).
+
+SCROLLEZ TOUT EN BAS de la page, vous verrez :
+
+┌─────────────────────────────────────────────────────────────────┐
+│                                                                 │
+│   Artifacts                                              (1)    │
+│   ─────────                                                     │
+│                                                                 │
+│   Produced during runtime                                       │
+│                                                                 │
+│   ┌──────────────────────────────────────────────────────┐      │
+│   │  📦 RestoGest-APK            ⬇ Download  •  15.2 MB │      │
+│   └──────────────────────────────────────────────────────┘      │
+│            ☝ CLIQUEZ POUR TÉLÉCHARGER                           │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+⬇️
+
+Un fichier ZIP se télécharge sur votre ordinateur :
+
+   📦 RestoGest-APK.zip  (~12 Mo)
+
+➡️ EXTRAYEZ-LE (double-clic ou clic droit → Extraire)
+
+   Vous obtenez :
+
+   📱 RestoGest-v1.0.0.apk   ← VOTRE APK !
+
+🎉 L'APK EST PRÊT !
+
+
+═══════════════════════════════════════════════════════════════════
+  ÉTAPE 7 : INSTALLER SUR VOTRE TÉLÉPHONE ANDROID (2 MIN)
+═══════════════════════════════════════════════════════════════════
+
+📲 MÉTHODE RECOMMANDÉE : VIA WHATSAPP
+
+   1. Sur votre ordinateur, ouvrez WhatsApp Web
+      (https://web.whatsapp.com)
+
+   2. Envoyez-vous l'APK à vous-même :
+      • Ouvrez une conversation avec vous-même, OU
+      • Envoyez-le à un ami, puis récupérez-le
+
+   3. Sur votre téléphone, ouvrez WhatsApp
+
+   4. Téléchargez le fichier APK
+
+   5. Ouvrez-le (en appuyant dessus)
+
+⬇️
+
+Première installation : Android va vous demander l'autorisation :
+
+┌─────────────────────────────────────────────┐
+│                                             │
+│     🛡️  Pour votre sécurité                 │
+│                                             │
+│     Votre téléphone n'est pas autorisé à    │
+│     installer des applications inconnues    │
+│     depuis cette source.                    │
+│                                             │
+│                                             │
+│           [ Annuler ]    [ Paramètres ]     │
+│                              ☝ CLIQUEZ      │
+│                                             │
+└─────────────────────────────────────────────┘
+
+⬇️
+
+┌─────────────────────────────────────────────┐
+│                                             │
+│     Installer des apps inconnues            │
+│                                             │
+│     WhatsApp                                │
+│                                             │
+│     Autoriser depuis cette source    ⚪ →🟢 │
+│                                  ☝ ACTIVEZ  │
+│                                             │
+└─────────────────────────────────────────────┘
+
+⬇️
+
+┌─────────────────────────────────────────────┐
+│                                             │
+│     🍴 RestoGest                            │
+│                                             │
+│     Voulez-vous installer cette app ?       │
+│                                             │
+│                                             │
+│           [ Annuler ]    [ INSTALLER ]      │
+│                              ☝ CLIQUEZ      │
+│                                             │
+└─────────────────────────────────────────────┘
+
+⬇️
+
+┌─────────────────────────────────────────────┐
+│                                             │
+│     ✅ App installée.                       │
+│                                             │
+│                                             │
+│           [ Terminer ]    [ Ouvrir ]        │
+│                              ☝ CLIQUEZ      │
+│                                             │
+└─────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════════
+  🎉 FÉLICITATIONS !
+═══════════════════════════════════════════════════════════════════
+
+RestoGest est maintenant installé sur votre téléphone !
+
+🔐 IDENTIFIANTS DE TEST :
+
+   Email    : mohamed@darelhout.tn
+   Password : demo2026
+
+
+═══════════════════════════════════════════════════════════════════
+  🔄 POUR LES MISES À JOUR FUTURES
+═══════════════════════════════════════════════════════════════════
+
+À chaque fois que vous modifiez votre code sur GitHub :
+→ Le build se relance automatiquement
+→ Vous téléchargez le nouvel APK
+→ Installez par-dessus l'ancien (les données sont gardées)
+
+
+═══════════════════════════════════════════════════════════════════
+  🆘 PROBLÈMES FRÉQUENTS
+═══════════════════════════════════════════════════════════════════
+
+❌ Le build échoue (❌ rouge au lieu de ✅ vert)
+   → Cliquez sur l'étape rouge pour voir l'erreur
+   → 9 fois sur 10 : vous avez oublié d'uploader le dossier .github
+   → Solution : ré-uploadez en vérifiant bien que .github est présent
+
+❌ "L'APK ne s'installe pas sur Android"
+   → Vérifiez que votre Android est en version 6.0+ (Marshmallow)
+   → Si c'est une mise à jour : désinstallez d'abord l'ancienne version
+
+❌ "Application non installée"
+   → Vos paramètres de sécurité sont trop stricts
+   → Paramètres > Sécurité > Autoriser les sources inconnues
+
+❌ "Je ne vois pas le dossier .github quand je glisse-dépose"
+   → Activez l'affichage des fichiers cachés sur votre OS
+   → Windows : Explorateur > Affichage > ☑ Éléments masqués
+   → Mac : Cmd + Shift + .
+
+
+═══════════════════════════════════════════════════════════════════
+  📊 QUOTAS GRATUITS GITHUB ACTIONS
+═══════════════════════════════════════════════════════════════════
+
+GitHub Free vous donne GRATUITEMENT par mois :
+
+   ✅ 2 000 minutes de build
+   ✅ Un build de RestoGest = ~10 minutes
+   ✅ Soit environ 200 builds par mois
+
+   = Largement suffisant pour toute l'année !
+
+
+═══════════════════════════════════════════════════════════════════
+                    Made with ❤️ in Tunisia 🇹🇳
+═══════════════════════════════════════════════════════════════════
