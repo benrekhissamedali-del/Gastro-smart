@@ -1,0 +1,317 @@
+# Instincts generated from https://github.com/benrekhissamedali-del/Gastro-smart
+# Generated: 2026-04-17T07:47:57.809Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: Gastro-smart-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Commit Length
+
+## Action
+
+Write moderate-length commit messages (~56 characters)
+
+## Evidence
+
+- Average commit message length: 56 chars
+- Based on 1 commits
+
+---
+id: Gastro-smart-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: Gastro-smart-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: Gastro-smart-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: Gastro-smart-arch-type-based
+trigger: "when adding new code"
+confidence: 0.8
+domain: architecture
+source: repo-analysis
+source_repo: https://github.com/benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Arch Type Based
+
+## Action
+
+Place code in the appropriate type folder (components/, services/, utils/, etc.)
+
+## Evidence
+
+- Type-based module organization detected
+- Folders: components, pages
+
+---
+id: Gastro-smart-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: gastro-smart-instinct-file-naming
+trigger: "When creating a new file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Instinct File Naming
+
+## Action
+
+Name the file using PascalCase (e.g., MyComponent.jsx)
+
+## Evidence
+
+- Pattern in namingConventions.files
+
+---
+id: gastro-smart-instinct-function-naming
+trigger: "When defining a new function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Instinct Function Naming
+
+## Action
+
+Name the function using camelCase (e.g., fetchData)
+
+## Evidence
+
+- Pattern in namingConventions.functions
+
+---
+id: gastro-smart-instinct-class-naming
+trigger: "When creating a new class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Instinct Class Naming
+
+## Action
+
+Name the class using PascalCase (e.g., UserProfile)
+
+## Evidence
+
+- Pattern in namingConventions.classes
+
+---
+id: gastro-smart-instinct-constant-naming
+trigger: "When declaring a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Instinct Constant Naming
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE (e.g., MAX_USERS)
+
+## Evidence
+
+- Pattern in namingConventions.constants
+
+---
+id: gastro-smart-instinct-import-style
+trigger: "When importing modules"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Instinct Import Style
+
+## Action
+
+Use relative import paths (e.g., import X from '../components/X')
+
+## Evidence
+
+- Pattern in importStyle
+
+---
+id: gastro-smart-instinct-export-style
+trigger: "When exporting modules or functions"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Instinct Export Style
+
+## Action
+
+Use named exports (e.g., export { MyComponent })
+
+## Evidence
+
+- Pattern in exportStyle
+
+---
+id: gastro-smart-instinct-test-location
+trigger: "When adding new tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Instinct Test Location
+
+## Action
+
+Place test files in a separate test directory, not alongside source files
+
+## Evidence
+
+- Pattern in testLocation: separate
+
+---
+id: gastro-smart-instinct-git-commit-format
+trigger: "When writing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Instinct Git Commit Format
+
+## Action
+
+Use freeform commit messages without enforced prefixes
+
+## Evidence
+
+- Pattern in commits.type: freeform
+- Example: 'Add complete RestoGest app source and APK build pipeline'
+
+---
+id: gastro-smart-instinct-commit-length
+trigger: "When writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Instinct Commit Length
+
+## Action
+
+Keep commit messages concise, around 56 characters on average
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: gastro-smart-instinct-apk-build-workflow
+trigger: "When configuring CI/CD for APK builds"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: benrekhissamedali-del/Gastro-smart
+---
+
+# Gastro Smart Instinct Apk Build Workflow
+
+## Action
+
+Use a GitHub Actions workflow file at .github/workflows/build-apk.yml
+
+## Evidence
+
+- Presence of .github/workflows/build-apk.yml
+
