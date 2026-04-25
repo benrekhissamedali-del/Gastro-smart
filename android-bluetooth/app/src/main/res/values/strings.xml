@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GastroSmart Bluetooth</string>
+    <string name="scan_title">Scanner les périphériques</string>
+    <string name="scan_stop">Arrêter le scan</string>
+    <string name="bluetooth_disabled">Bluetooth désactivé</string>
+    <string name="permission_required">Permissions Bluetooth requises</string>
+    <string name="connect">Connecter</string>
+    <string name="disconnect">Déconnecter</string>
+    <string name="send">Envoyer</string>
+    <string name="power_on">ON</string>
+    <string name="power_off">OFF</string>
+    <string name="unknown_device">Périphérique inconnu</string>
+    <string name="connection_error">Erreur de connexion</string>
+</resources>
