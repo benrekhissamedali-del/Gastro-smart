@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme — Compose handles actual colors via Material3 -->
+    <style name="Theme.GastroSmartBluetooth" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Theme.GastroSmartBluetooth.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
