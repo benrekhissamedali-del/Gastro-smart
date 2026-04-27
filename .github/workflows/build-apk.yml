@@ -91,14 +91,14 @@ jobs:
             ## APK Android — GastroSmart Bluetooth Control
 
             ### Installation
-            1. Telecharger **`gastrosmart-bluetooth-release.apk`** (signe) ou `debug.apk` (tests)
-            2. Sur Android : **Parametres -> Securite -> Installer des apps inconnues**
+            1. Télécharger **`gastrosmart-bluetooth-release.apk`** (signé) ou `debug.apk` (tests)
+            2. Sur Android : **Paramètres → Sécurité → Installer des apps inconnues**
             3. Ouvrir le fichier APK
 
-            ### Fonctionnalites
+            ### Fonctionnalités
             - Scan BLE et Bluetooth Classic
             - Connexion GATT (BLE) / SPP (HC-05, HC-06, Arduino)
-            - Controle universel : ON/OFF, Slider 0-100%, commandes hex brutes
+            - Contrôle universel : ON/OFF, Slider 0-100%, commandes hex brutes
             - Compatible Android 6.0+ (API 23+)
           files: |
             android-bluetooth/app/build/outputs/apk/debug/*.apk
