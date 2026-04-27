@@ -17,9 +17,29 @@ android {
         vectorDrawables { useSupportLibrary true }
     }
 
-    buildTypes {
+    signingConfigs {
         release {
-            minifyEnabled true
+            // Values injected by GitHub Actions secrets or local keystore.properties
+            def props = new Properties()
+            def propsFile = rootProject.file('keystore.properties')
+            if (propsFile.exists()) props.load(propsFile.newDataInputStream())
+
+            storeFile     file(props.getProperty('storeFile',     System.getenv('KEYSTORE_PATH') ?: 'release.jks'))
+            storePassword       props.getProperty('storePassword', System.getenv('STORE_PASSWORD') ?: '')
+            keyAlias            props.getProperty('keyAlias',      System.getenv('KEY_ALIAS')      ?: 'gastrosmart')
+            keyPassword         props.getProperty('keyPassword',   System.getenv('KEY_PASSWORD')   ?: '')
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            versionNameSuffix '-debug'
+        }
+        release {
+            signingConfig    signingConfigs.release
+            minifyEnabled    true
+            shrinkResources  true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
